@@ -86,3 +86,5 @@ docker run parser-image
 ```  
 
 The shell script should run automatically and display results of all 5 tests to the terminal as well as a file `full_test_output.txt` for covenient viewing with the logs section of the Docker container, terminal, or from the resulting `.txt` file.
+
+The output of lexer.py is used as input for parser.py. The inputs files can be found in the `/lexer_input` directory, and the corresponding output (and input to the parser) can be found in `/lexer_output`.
