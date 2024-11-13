@@ -67,3 +67,22 @@ Previously the token was `TOK_CHARACTER`, but this failed to correctly tokenize 
 4. Added `TOK_ERROR` token to the lexer such that the parser might be able to identify errors and sugguest or autofix mistakes, depending on where it is in the tree. The lexer now tokenizes `TOK_ERROR` and the error value rather than printing an error message.
 
 ## How to Build and Run
+
+### 1. Clone the Repository
+
+After cloning the repository, navigate to the project directory.
+
+### 2. Build the Docker Image
+
+Use the provided Dockerfile to build the Docker image:
+Note that you must be in the project directory to use the `.` directory, otherwise please specify the directory.
+```
+docker build -t parser-image .
+```
+
+### Run the Docker Container
+```
+docker run parser-image
+```  
+
+The shell script should run automatically and display results of all 5 tests to the terminal as well as a file `full_test_output.txt` for covenient viewing with the logs section of the Docker container, terminal, or from the resulting `.txt` file.
