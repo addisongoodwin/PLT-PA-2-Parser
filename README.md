@@ -85,6 +85,11 @@ docker build -t parser-image .
 docker run parser-image
 ```  
 
+## Understanding Output of parser.py
+
 The shell script should run automatically and display results of all 5 tests to the terminal as well as a file `full_test_output.txt` for covenient viewing with the logs section of the Docker container, terminal, or from the resulting `.txt` file.
 
 The output of lexer.py is used as input for parser.py. The inputs files can be found in the `/lexer_input` directory, and the corresponding output (and input to the parser) can be found in `/lexer_output`.
+
+### Error Handling
+I moved much of the error handing I was doing during lexical analysis into the parsing. I felt that some of the corrections were syntatic errors, and thus should be handled in the parser. I want to try to implement automatic error fixing, for example assigning default values of `'0'` for when an invalid value is passed into the `strength` property, but it is not quite implemented yet. It is sucessfully catching errors and trying to continue forwards for the most part, only stopping when it gets really confused or "misalligned" during the recursive descent parsing.
