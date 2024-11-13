@@ -76,8 +76,8 @@ class Scanner:
 		elif next_word == TOKENS['TOK_NO']:
 			return False
 		else:
-			print(f"Expected 'Yes' or 'No', but found '{next_word}'. Default set to 'True'")
-			return True
+			# print(f"Expected 'Yes' or 'No', but found '{next_word}'. Default set to 'True'")
+			return None
 
 	# tokenize a NUMBER and its value
 	def scan_number(self, first_digit):
@@ -87,8 +87,7 @@ class Scanner:
 		if no.isdigit():
 			self.add_token('TOK_NUMBER', int(no))
 		else:
-			print(f"Expected a number, but found '{no}'. Default set to '0'")
-			self.add_token('TOK_NUMBER', 0)
+			self.add_token('TOK_ERROR', None)
 
 	def scan_instruction(self, first_word):
 		instruction_parts = [first_word]
@@ -175,9 +174,9 @@ class Scanner:
 				if evil_val is not None:
 					self.add_token('TOK_EVIL', evil_val)
 				else:
-					print(f"Expected 'yes' or 'no' after 'evil'")
-			else:
-				print(f"Expected '=' after 'evil' for assignment")
+					self.add_token('TOK_EVIL', None)
+			# else:
+			# 	print(f"Expected '=' after 'evil' for assignment")
 		elif word == TOKENS['TOK_STRENGTH']:
 			self.add_token('TOK_STRENGTH')
 			# next must be a number
@@ -188,13 +187,10 @@ class Scanner:
 				# skip spaces
 				while self.peek_char() and self.peek_char().isspace():
 					self.get_next_char()
-				
+				# can if the next char is a number
 				if self.peek_char() and self.peek_char().isdigit():
 					first_digit = self.get_next_char()
 					self.scan_number(first_digit)
-				else:
-					print(f"Expected a number after 'strength'. Default set to '0'")
-					self.scan_number('0')
 		elif word == TOKENS['TOK_SCENES']:
 			self.add_token('TOK_SCENES')
 		elif word == TOKENS['TOK_EVENT']:

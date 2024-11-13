@@ -3,6 +3,7 @@ Addison Goodwin, ag4423
 
 ## Context-free Grammar & Production Rules
 
+```
 program 				-> statement_list
 statement_list 			-> statement statement_list | ε
 
@@ -30,6 +31,7 @@ character_list			-> TOK_IDENTIFIER character_list_t | ε
 character_list_t		-> TOK_COMMA TOK_IDENTIFIER character_list_t | ε
 
 boolean					-> TOK_TRUE | TOK_FALSE
+```
 
 ```
 		NON-TERMINALS							TERMINALS
@@ -61,5 +63,7 @@ Previously the token was `TOK_CHARACTER`, but this failed to correctly tokenize 
 2. Removed print statements used for clarity during Part 1 submission but that are not suitable as input into the parser.
 
 3. Removed tokenization of the `=` tokenized as `TOK_EQUALS` during tokenization of the value in `TOK_EVIL`. The value of `TOK_EQUALS` is captured into the token during lexical analysis, so this `=` is only annoying during parsing.
+
+4. Added `TOK_ERROR` token to the lexer such that the parser might be able to identify errors and sugguest or autofix mistakes, depending on where it is in the tree. The lexer now tokenizes `TOK_ERROR` and the error value rather than printing an error message.
 
 ## How to Build and Run

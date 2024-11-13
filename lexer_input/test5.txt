@@ -1,0 +1,66 @@
+Characters
+
+Leonardo  
+- evil = yes  
+- trait = brave, ambitious  
+- strength = 9999999999999  
+
+Picasso  
+- evil = no  
+- trait = rebellious  
+- strength = -15  
+
+VanGogh  
+- evil = no  
+- trait = artistic, troubled, genius, restless  
+- strength = 5  
+
+Frida  
+- evil = yes  
+- trait = fearless, thoughtful  
+- strength = 7  
+
+Dali  
+- trait = imaginative, eccentric  
+- strength = 8  
+
+Daumier  
+- evil = no  
+- trait = sharp, critical, satirical  
+- strength = 3  
+
+Scenes
+
+One  
+- location = gallery  
+- characters = Leonardo, Picasso, Dali  
+- event = the sculptures suddenly start talking  
+
+Two  
+- location = village  
+- characters = VanGogh, Frida  
+- event = strange symbols appear on every wall  
+
+Three  
+- location = museum  
+- characters = Picasso, Daumier, Dali  
+- event = the lights flicker and reveal hidden paintings  
+
+Four  
+- location = forest  
+- characters = Frida, VanGogh, Leonardo  
+- event = time moves backward, and everyone gets younger  
+
+Five  
+- location = mountain  
+- characters = Picasso, Dali, Daumier  
+- event = a portal opens in the sky and swallows the mountain  
+
+Six  
+- location = labyrinth  
+- characters = Leonardo, Frida, VanGogh  
+- event = the walls of the labyrinth shift and trap everyone inside  
+
+Instructions
+
+- write story  

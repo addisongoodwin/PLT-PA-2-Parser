@@ -1,0 +1,207 @@
+{
+    "type": "program",
+    "block": [
+        [
+            {
+                "type": "character_block",
+                "name": "Leonardo",
+                "definition": [
+                    {
+                        "type": "trait_list",
+                        "traits": [
+                            "brave",
+                            "humble",
+                            "smart"
+                        ]
+                    },
+                    {
+                        "type": "restricted_assignment",
+                        "strength": 10
+                    }
+                ]
+            },
+            {
+                "type": "character_block",
+                "name": "Picasso",
+                "definition": [
+                    {
+                        "type": "trait_list",
+                        "traits": [
+                            "big",
+                            "jealous"
+                        ]
+                    },
+                    {
+                        "type": "restricted_assignment",
+                        "strength": 9
+                    }
+                ]
+            },
+            {
+                "type": "character_block",
+                "name": "VanGogh",
+                "definition": [
+                    {
+                        "type": "trait_list",
+                        "traits": [
+                            "confused"
+                        ]
+                    },
+                    {
+                        "type": "restricted_assignment",
+                        "strength": 0
+                    }
+                ]
+            },
+            {
+                "type": "character_block",
+                "name": "Frida",
+                "definition": [
+                    {
+                        "type": "trait_list",
+                        "traits": [
+                            "witty",
+                            "calm"
+                        ]
+                    },
+                    {
+                        "type": "restricted_assignment",
+                        "strength": 7
+                    }
+                ]
+            },
+            {
+                "type": "character_block",
+                "name": "Dali",
+                "definition": [
+                    {
+                        "type": "trait_list",
+                        "traits": [
+                            "sneaky",
+                            "quick"
+                        ]
+                    },
+                    {
+                        "type": "restricted_assignment",
+                        "strength": 8
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "type": "scene",
+                "name": "One",
+                "details": [
+                    {
+                        "type": "location_assignment",
+                        "location": "classroom"
+                    },
+                    {
+                        "type": "characters_present",
+                        "characters": [
+                            "Leonardo",
+                            "Picasso",
+                            "VanGogh"
+                        ]
+                    },
+                    {
+                        "type": "event_assignment",
+                        "event": "painting class"
+                    }
+                ]
+            },
+            {
+                "type": "scene",
+                "name": "Two",
+                "details": [
+                    {
+                        "type": "location_assignment",
+                        "location": "village"
+                    },
+                    {
+                        "type": "characters_present",
+                        "characters": [
+                            "Leonardo",
+                            "Picasso"
+                        ]
+                    },
+                    {
+                        "type": "event_assignment",
+                        "event": "pillow fight"
+                    }
+                ]
+            },
+            {
+                "type": "scene",
+                "name": "Three",
+                "details": [
+                    {
+                        "type": "location_assignment",
+                        "location": "forest"
+                    },
+                    {
+                        "type": "characters_present",
+                        "characters": [
+                            "Frida",
+                            "Dali",
+                            "Leonardo"
+                        ]
+                    },
+                    {
+                        "type": "event_assignment",
+                        "event": "a mysterious shadow appears"
+                    }
+                ]
+            },
+            {
+                "type": "scene",
+                "name": "Four",
+                "details": [
+                    {
+                        "type": "location_assignment",
+                        "location": "mountain"
+                    },
+                    {
+                        "type": "characters_present",
+                        "characters": [
+                            "VanGogh",
+                            "Frida"
+                        ]
+                    },
+                    {
+                        "type": "event_assignment",
+                        "event": "the ground starts shaking"
+                    }
+                ]
+            },
+            {
+                "type": "scene",
+                "name": "Five",
+                "details": [
+                    {
+                        "type": "location_assignment",
+                        "location": "castle"
+                    },
+                    {
+                        "type": "characters_present",
+                        "characters": [
+                            "Picasso",
+                            "Dali",
+                            "Leonardo"
+                        ]
+                    },
+                    {
+                        "type": "event_assignment",
+                        "event": "the king is kidnapped"
+                    }
+                ]
+            }
+        ],
+        {
+            "type": "instruction_block",
+            "instruction": "TOK_WRITE_STORY_INST",
+            "content": "write the story"
+        }
+    ]
+}
